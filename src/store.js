@@ -6,6 +6,9 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
+  if (action.type === 'amountChanged') {
+    return {...state, amount: action.payload};
+  }
   return state;
 }
 

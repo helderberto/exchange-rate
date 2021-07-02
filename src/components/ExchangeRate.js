@@ -12,7 +12,6 @@ export function ExchangeRate() {
   const currencyCode = useSelector(state => state.currencyCode);
 
   const setAmount = () => {};
-
   const setCurrencyCode = () => {}
 
   const [currencyData, setCurrencyData] = useState({USD: 1.0})
@@ -24,15 +23,10 @@ export function ExchangeRate() {
     });
   }, [currencyCode]);
 
-  const handleCurrencyCode = useCallback(
-    (e) => setCurrencyCode(e.target.value),
-    []
-  );
-
-  const handleAmountChange = useCallback((e) => {
-    let newAmount = e.target.value;
-    setAmount(newAmount);
-  }, []);
+  // const handleCurrencyCode = useCallback(
+  // (e) => setCurrencyCode(e.target.value),
+  // []
+  // );
 
   return (
     <>
@@ -42,12 +36,11 @@ export function ExchangeRate() {
           <CurrencyCodePicker
             supportedCurrencies={supportedCurrencies}
             currencyCode={currencyCode}
-            onChange={handleCurrencyCode}
           />
         </h1>
       </section>
       <section>
-        <AmountField amount={amount} onChange={handleAmountChange} />
+        <AmountField amount={amount} />
       </section>
       <section>
         <RateTable currencyData={currencyData} amount={amount} />
