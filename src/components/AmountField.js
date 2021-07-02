@@ -5,7 +5,7 @@ export function AmountField({amount}) {
 
   function onChange(e) {
     dispatch({
-      type: "amountChanged",
+      type: "rates/amountChanged",
       payload: e.target.value,
     });
   }
