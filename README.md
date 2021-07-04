@@ -19,3 +19,7 @@ A simple currency exchange calculator built to demonstrate using redux with reac
 ---
 
 This app was built using [Create React App](https://create-react-app.dev/).
+
+---
+
+Course [Apply Redux to a Modern React Hooks Application by Jamund Ferguson](https://egghead.io/courses/apply-redux-to-a-modern-react-hooks-application-8a37)
