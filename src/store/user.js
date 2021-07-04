@@ -1,5 +1,5 @@
 const initialState = {
-  name: "Helder",
+  name: 'Helder',
   loggedIn: false,
 };
 
@@ -8,6 +8,6 @@ export function userReducer(state = initialState, action) {
 }
 
 // selectors
-export const getName = state => state.user.name;
+export const getName = (state) => state.user.name;
 
-export const getLoggedIn = state => state.user.loggedIn;
+export const getLoggedIn = (state) => state.user.loggedIn;

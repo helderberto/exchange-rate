@@ -1,11 +1,11 @@
-import {useDispatch} from "react-redux";
+import { useDispatch } from 'react-redux';
 
-export function AmountField({amount}) {
+export function AmountField({ amount }) {
   const dispatch = useDispatch();
 
   function onChange(e) {
     dispatch({
-      type: "rates/amountChanged",
+      type: 'rates/amountChanged',
       payload: e.target.value,
     });
   }
